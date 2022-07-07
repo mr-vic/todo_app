@@ -5,7 +5,7 @@
     <form action="/task/update/<%= task.id %>" method="post">
       <div class="mb-3">
         <label for="inputTask">Task:</label>
-        <input autofocus type="text" class="form-control shadow-none mb-3" id="inputTask" name="Task" value="<%= task.title %>">
+        <input autofocus type="text" class="form-control shadow-none mb-3" id="inputTask" name="title" value="<%= task.title %>">
         <label for="inputStatus">Status:</label>
         <select class="form-select shadow-none" aria-label="Default select example" id="inputStatus" name="status">
           <option value="In progress" selected>In progress</option>

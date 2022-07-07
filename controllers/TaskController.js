@@ -12,9 +12,9 @@ class TaskController {
         };
     };
 
-    getTask(id) {
+    static async getTask(id) {
         try {
-            return taskModel.getTask(id);
+            return await taskModel.getTask(id);
         } catch (err) {
             console.log(err.message);
         };
@@ -39,10 +39,10 @@ class TaskController {
     async update(req, res) {
         try {
             const id = req.params.id;
-            const result = this.getTask(id);
+            const result = await TaskController.getTask(id);
             res.render('task/update', { task: result });
         } catch (err) {
-            console.log(err.message);
+            console.log(err);
         };
     };
 
@@ -61,7 +61,8 @@ class TaskController {
     async delete(req, res) {
         try {
             const id = req.params.id;
-            const result = this.getTask(id);
+            const result = await TaskController.getTask(id);
+            console.log(result);
             res.render('task/delete', { task: result });
         } catch (err) {
             console.log(err.message);
