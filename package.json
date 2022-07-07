@@ -1,10 +1,11 @@
 {
   "name": "todo_app",
   "version": "1.0.0",
-  "description": "express, ejs, mongodb, mvc, crud",
+  "description": "Simple ToDo App",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",

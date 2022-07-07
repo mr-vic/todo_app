@@ -1,0 +1,29 @@
+<%- include('../partial/header') %> 
+
+<div class="container">
+  <h2 class="mt-5 mb-3">To Do List</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Task</th>
+        <th scope="col">Status</th>
+        <th class="d-print-none">
+          Actions
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (const task of tasks) { %>
+      <tr>
+        <td><%= task.title %></td>
+        <td class="status"><%= task.status %></td>
+        <td class="d-print-none">
+          <a class="btn btn-sm btn-warning" href="/task/update/<%= task.id %>">Update</a>
+          <a class="btn btn-sm btn-danger" href="/task/delete/<%= task.id %>">Delete</a>
+        </td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+</div>
+<%- include('../partial/footer') %> 
