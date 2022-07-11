@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/mr-vic/todo_app#readme",
   "dependencies": {
+    "date-fns": "^2.28.0",
     "dotenv": "^16.0.1",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
